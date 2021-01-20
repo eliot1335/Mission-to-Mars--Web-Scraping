@@ -106,7 +106,7 @@ def scrape():
 
     for x in range(len(hemi_list)):
         hemi_dict = {}
-        hemi_dict["title"] = browser.find_by_css("h3").text
+        hemi_dict["title"] = browser.find_by_css("h3")[x].text
         browser.links.find_by_partial_text("Hemisphere")[x].click()
         hemi_dict["img_url"] = browser.find_by_css("img[class='wide-image']")["src"]
         hemisphere_image_urls.append(hemi_dict)

@@ -40,8 +40,8 @@
                     <h3>Mars Facts</h3>
                     {{mars_data.mars_facts_table|safe}}
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container for featured image and mars facts -->
+            </div>
+        </div>
 
         <!-- Mars Hemispheres -->
         <h3 class="h3_hemispheres">Mars Hemispheres</h3>
@@ -52,16 +52,16 @@
                     {% for item in mars_data.hemisphere_image_urls %}
                     <div class="col-md-6">
                         <div class="card text-white bg-dark">
-                            <img class="card-img-top" src="{{item.image_url}}" alt="{{item.title}}">
+                            <img class="card-img-top" src="{{item.img_url}}" alt="{{item.title}}">
                             <div class="card-body">
                                 <p class="card-text">{{item.title}}</p>
                             </div>
                         </div>
                     </div>
                     {% endfor %}
-                </div> <!-- row -->
-            </div> <!-- col-md-12 -->
-        </div> <!-- Card Deck -->
+                </div>
+            </div>
+        </div>
 
 
 
