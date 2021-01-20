@@ -65,9 +65,16 @@ def scrape():
     html = browser.html
     soup = bs(html, "html.parser")
 
-    images = soup.find_all("img", class_="BaseImage object-scale-down")
-    for image in images:
-        mars_data["featured_image_url"] = image["src"]
+    images = soup.find_all("img")
+    for i in range(len(images)):
+        featured_image_url = browser.find_by_css("img[class='BaseImage object-scale-down']")["src"]
+    
+    mars_data["featured_image_url"] = featured_image_url
+
+
+    # images = soup.find_all("img", class_="BaseImage object-scale-down")
+    # for image in images:
+    #     mars_data["featured_image_url"] = image["src"]
 
     # mars_data["feature_image_url"] = featured_image_url
 # ---------------------------------------------------------------------
@@ -79,7 +86,7 @@ def scrape():
 
     mars_df = mars_facts[0]
     mars_df.columns = ["Description", "Value"]
-    # mars_df.set_index("Description", inplace=True)
+    mars_df.set_index("Description", inplace=True)
 
 
     mars_df_html = mars_df.to_html()
