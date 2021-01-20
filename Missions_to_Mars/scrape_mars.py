@@ -39,7 +39,7 @@ def scrape():
 
     mars_data["news_title"] = news_titles[0]
 # --------------------------------------------------------------------
-    time.sleep(1)
+    time.sleep(3)
 
     paragraphs = soup.find_all("div", class_="article_teaser_body")
 
