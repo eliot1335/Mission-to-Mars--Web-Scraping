@@ -16,7 +16,7 @@
 
         <div class="jumbotron text-center">
             <h1>Mission to Mars</h1>
-            <p><a class="btn bt-primary btn-lg" href="/scrap" role="button">Scrape New Data</a></p>
+            <p><a class="btn bt-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
         </div>
 
         <div class="container">
@@ -38,7 +38,7 @@
                 <!-- Mars Facts-->
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <h3>Mars Facts</h3>
-                    {{mars_data.html_table|safe}}
+                    {{mars_data.mars_facts_table|safe}}
                 </div>
             </div> <!-- row -->
         </div> <!-- container for featured image and mars facts -->
@@ -49,7 +49,7 @@
         <div class="card-deck">
             <div class="col-md-12">
                 <div class="row">
-                    {% for item in mars_data.hemi_image_urls %}
+                    {% for item in mars_data.hemisphere_image_urls %}
                     <div class="col-md-6">
                         <div class="card text-white bg-dark">
                             <img class="card-img-top" src="{{item.image_url}}" alt="{{item.title}}">
