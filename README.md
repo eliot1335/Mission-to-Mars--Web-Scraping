@@ -1,6 +1,6 @@
-# Web Scraping Homework - Mission to Mars
+# Mission to Mars - Web Scraping
 
-In this homework exercise, we will be combining flask and html to create a web scraping page with API endpoints by storing and pull data from mongoDB.
+In this exercise, we will be combining flask and html to create a web scraping page with API endpoints by storing and pull data from mongoDB.
 
 ## Step 1 - Scraping
 
